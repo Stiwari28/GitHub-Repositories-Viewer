@@ -2,11 +2,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #edf1f7; /* Light blue pastel background */
+    background-color: #edf1f7; 
 }
 
 header {
-    background-color: #3498db; /* Darker blue for header */
+    background-color: #3498db; 
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -20,7 +20,7 @@ main {
     padding: 20px;
 }
 
-/* Input and Button Styles */
+/*---------------------------------------- Input and Button Styles--------------------------------- */
 div {
     margin-bottom: 20px;
 }
@@ -29,20 +29,20 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #3498db; /* Blue for labels */
+    color: #3498db; 
 }
 
 input {
     width: 30%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #aed6f1; /* Lighter blue for input border */
+    border: 1px solid #aed6f1; 
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
 button {
-    background-color: #3498db; /* Blue button background */
+    background-color: #3498db; 
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -52,10 +52,10 @@ button {
 }
 
 button:hover {
-    background-color: #2077b0; /* Darker blue on hover */
+    background-color: #2077b0; 
 }
 
-/* Loader Styles */
+/* ----------------------------------------------Loader Styles--------------------------------------- */
 .loader {
     display: flex;
     justify-content: center;
@@ -63,6 +63,17 @@ button:hover {
     height: 100vh;
 }
 
+/*------------------------------------------------Welcome---------------------------------------------*/
+.welcome {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #3498db; 
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*------------------------------------------------Pagination-------------------------------------------*/
 .pagination {
     margin-top: 20px;
     display: flex;
@@ -75,6 +86,7 @@ button:hover {
     margin: 0 10px;
 }
 
+/*------------------------------------------------Repositories-------------------------------------------*/
 .repositories {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -82,8 +94,8 @@ button:hover {
 }   
 
 .repository {
-    background-color: rgba(255, 255, 255, 0.7); /* Glass-like effect with transparency */
-    backdrop-filter: blur(10px); /* Apply a blur effect */
+    background-color: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(10px); 
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -97,31 +109,9 @@ button:hover {
     transform: translate(0, -2px);
 }
 
-.welcome {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #3498db; /* Darker blue for welcome message */
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 
-h2 {
-    margin-bottom: 5px;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-a {
-    color: #3498db; /* Blue for links */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Responsive Styles */
+/*-------------------------------------------------Responsive Styles -------------------------------------------*/
 @media screen and (max-width: 600px) {
     .repositories {
         grid-template-columns: 1fr;

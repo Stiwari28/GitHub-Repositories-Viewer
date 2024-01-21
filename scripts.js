@@ -2,6 +2,7 @@ const perPageOptions = [10, 30, 50, 100];
 let currentPage = 1;
 let reposPerPage = 10;
 
+/*-------------------------------------------- Repository Division*-------------------------------------------*/
 function loadRepositories() {
     const username = document.getElementById('username').value;
     const repositoriesDiv = document.getElementById('repositories');
@@ -23,8 +24,7 @@ function loadRepositories() {
         .then(response => response.json())
         .then(repositories => {
             loaderDiv.style.display = 'none';
-            // Sort repositories by creation date (newest first)
-            repositories.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+            repositories.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));  // Sort repositories by creation date (newest first)
             displayRepositories(repositories);
             displayWelcomeMessage(username);
             welcomeDiv.style.display = 'block';
@@ -36,6 +36,8 @@ function loadRepositories() {
             console.error(error);
         });
 }
+
+/*---------------------------------------------------Welcome Division------------------------------------*/
 function displayWelcomeMessage(username) {
     const welcomeDiv = document.getElementById('welcome');
     const welcomeMessage = document.createElement('div');
@@ -43,7 +45,7 @@ function displayWelcomeMessage(username) {
     welcomeDiv.appendChild(welcomeMessage);
 }
 
-
+/*-------------------------------------------------Repository Division------------------------------------*/
 function displayRepositories(repositories) {
     const repositoriesDiv = document.getElementById('repositories');
 
@@ -62,7 +64,7 @@ function displayRepositories(repositories) {
     });
 }
 
-
+/*----------------------------------------------------Pagination Division-----------------------------------------*/
 function createPagination(totalRepositories) {
     const paginationDiv = document.getElementById('pagination');
 
@@ -101,8 +103,7 @@ function createPagination(totalRepositories) {
     paginationDiv.appendChild(nextButton);
 }
 
-
-
+/*-------------------------------------------------------More than 10 repos--------------------------------------------*/
 function changePage(change) {
     currentPage += change;
     loadRepositories();
